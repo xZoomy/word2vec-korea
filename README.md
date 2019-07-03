@@ -3,5 +3,5 @@
 Put `kernel.sqlite` in `/databases` folder.
 
 
-
-Help for Markdown [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+SQLite Documentation [here](https://docs.python.org/fr/3.6/library/sqlite3.html).\
+Markdown Documentation [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
