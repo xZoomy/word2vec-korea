@@ -1,8 +1,13 @@
 import sqlite3
 
-db = sqlite3.connect('./database/kernel.sqlite')
+db = sqlite3.connect('../databases/kernel.sqlite')
 c = db.cursor()
 
 query = """select assembly from functions limit 5;"""
-print(c.execute(query))
+c.execute(query)
+rows = c.fetchall()
+
+for row in rows:
+    print(row)
+
 c.close()

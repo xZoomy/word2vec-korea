@@ -8,8 +8,8 @@ Created on Wed Jul  3 14:46:36 2019
 
 import sqlite3
 from sqlite3 import Error
- 
- 
+
+
 def create_connection(db_file):
     """ create a database connection to the SQLite database
         specified by the db_file
@@ -21,10 +21,10 @@ def create_connection(db_file):
         return conn
     except Error as e:
         print(e)
- 
+
     return None
- 
- 
+
+
 def select_assembly(conn):
     """
     Query all rows in the tasks table
@@ -35,26 +35,26 @@ def select_assembly(conn):
     #cur.execute("SELECT assembly FROM functions limit 1")
     cur.execute("SELECT assembly FROM functions")
     rows = cur.fetchall()
-    f=open("assembly.asm","a+")
+    f=open("../output/assembly.asm","a+")
     for row in rows:
         for i in range(0,len(row)):
             f.write(row[i])
         #print(type(row))
         #print("123")
     f.close()
- 
- 
 
- 
+
+
+
 def main():
-    database = "kernel.sqlite"
- 
+    database = "../databases/kernel.sqlite"
+
     # create a database connection
     conn = create_connection(database)
     with conn:
         print("select assembly with limit 5 : ")
         select_assembly(conn)
- 
- 
+
+
 if __name__ == '__main__':
     main()
