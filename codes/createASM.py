@@ -35,7 +35,7 @@ def select_assembly(conn):
     #cur.execute("SELECT assembly FROM functions limit 1")
     cur.execute("SELECT assembly FROM functions")
     rows = cur.fetchall()
-    f=open("../output/assembly.asm","a+")
+    f=open("../input/assembly.asm","a+")
     for row in rows:
         for i in range(0,len(row)):
             f.write(row[i])
