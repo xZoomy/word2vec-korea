@@ -4,12 +4,6 @@ from gensim.models import word2vec
 import logging
 import operator
 
-from keras.layers import Input, Embedding, merge
-from keras.models import Model
-
-import tensorflow as tf
-import numpy as np
-
 import urllib.request
 import os
 import zipfile
