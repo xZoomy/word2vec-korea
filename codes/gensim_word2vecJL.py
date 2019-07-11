@@ -6,7 +6,6 @@ from keras.models import Model
 from gensim.similarities import WmdSimilarity
 from gensim.test.utils import datapath
 from gensim.models import KeyedVectors
-import pyparsing
 import tensorflow as tf
 import numpy as np
 import re
@@ -17,9 +16,6 @@ import operator
 from gensim import utils, matutils
 
 MAX_WORDS_IN_BATCH = 10000
-
-
-
 
 class Text8Corpus2(object):
     """Iterate over sentences from the "assembly.asm" corpus, unzipped from http://mattmahoney.net/dc/text8.zip ."""
@@ -93,7 +89,7 @@ def convert_data_to_index(string_data, wv):
         if word.decode() in wv:
             index_data.append(wv.vocab[word.decode()].index)
     return index_data
-    
+
 def gensim_demo():
 
     #filename = "main.c"
