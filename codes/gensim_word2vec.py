@@ -137,7 +137,7 @@ if __name__ == "__main__":
         if run_opt == 1:
             nb_iters = 1
             name_model = 'mymodel'
-            name_input = '../input/assembly.asm'
+            name_input = '../input/kernel.txt'
             nb_min = 10
             # nb_iters = int(input("Nb iters ? "))
             # name_model = input("Name of model (def='mymodel')")
