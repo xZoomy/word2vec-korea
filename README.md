@@ -2,8 +2,8 @@
 
 ## How to use
 
+Create `/input`, `/model`.\
 Put `kernel.sqlite` in `/databases` folder.\
-Create `/input`
 Run `python createASM.py` in console in `/codes` folder.\
 Run `python gensim_word2vec.py` (WIP not working)
 

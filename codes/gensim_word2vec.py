@@ -108,7 +108,7 @@ def gensim_demo(nb_iters, name_model='mymodel', name_input='text8', nb_min=10):
 
 
 def gensim_load(name_model='mymodel'):
-    model = word2vec.Word2Vec.load(root_path + name_model)
+    model = word2vec.Word2Vec.load('../model/' + name_model)
     vocab_size = len(model.wv.vocab)
     print("The vocabulary contains {} words.".format(vocab_size))
     while True:
@@ -137,6 +137,7 @@ if __name__ == "__main__":
         if run_opt == 1:
             nb_iters = 1
             name_model = 'mymodel'
+            # name_input = '../input/assembly.asm'
             name_input = '../input/kernel.txt'
             nb_min = 10
             # nb_iters = int(input("Nb iters ? "))
