@@ -2,7 +2,7 @@
 
 ## How to use
 
-Create `/input`, `/model`.\
+Run `setup.py`\
 Put `kernel.sqlite` in `/databases` folder and `kernel.txt` in `/input`.\
 Run `python createASM.py` in console in `/codes` folder.\
 Run `python inputModifier.py`.\
@@ -10,8 +10,9 @@ Run `python gensim_word2vec.py`.\
 
 ## Files
 
-`createASM.py` for creating `assembly.asm`
-`inputModifier.py` for creating `test.asm`, a modified version of `assembly.asm`
+`setup.py` for install dependencies and creating right environment.\
+`createASM.py` for creating `assembly.asm`\
+`inputModifier.py` for creating `test.asm`, a modified version of `assembly.asm`\
 `gensim_word2vec.py` for neural network
 
 ## Dependencies
