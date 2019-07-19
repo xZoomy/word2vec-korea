@@ -18,6 +18,7 @@ Run `python gensim_word2vec.py`.\
 ## Dependencies
 
 [gensim](https://radimrehurek.com/gensim/) (`pip install --upgrade gensim`)
+Python 3.6.8
 
 ## Documentation
 

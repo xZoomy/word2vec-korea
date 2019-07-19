@@ -32,7 +32,6 @@ def select_assembly(conn):
     :return:
     """
     cur = conn.cursor()
-    #cur.execute("SELECT assembly FROM functions limit 1")
     cur.execute("SELECT assembly FROM functions")
     rows = cur.fetchall()
     f=open("../input/assembly.asm","w+")
@@ -40,16 +39,14 @@ def select_assembly(conn):
         for i in range(0,len(row)):
             f.write(row[i])
         #print(type(row))
-        #print("123")
     f.close()
+    print("assembly.asm created")
 
 
 
 
 def main():
     database = "../databases/kernel.sqlite"
-
-    # create a database connection
     conn = create_connection(database)
     with conn:
         print("select assembly with limit 5 : ")

@@ -1,7 +1,7 @@
 import re
 import sys
 
-regex1 = r"(loc|qword|byte|unk|locret|dword|off|asc)_.{16}|[A-F\d]{16}"
+regex1 = r"(loc|qword|byte|unk|locret|dword|off|asc)_.{16}\b|[A-F\d]{16}"
 # regex2 = r"[A-F\d]{2,17}h"
 regex3 = r"\+[A-F\d]{2,17}h"
 regex4 = r"\-[A-F\d]{2,17}h"
