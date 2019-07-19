@@ -24,7 +24,7 @@ def create_connection(db_file):
 
     return None
 
-
+# TODO fix les \n
 def select_assembly(conn):
     """
     Query all rows in the tasks table
