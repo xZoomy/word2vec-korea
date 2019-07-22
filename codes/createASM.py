@@ -24,7 +24,6 @@ def create_connection(db_file):
 
     return None
 
-# TODO fix les \n
 def select_assembly(conn):
     """
     Query all rows in the tasks table
@@ -32,15 +31,15 @@ def select_assembly(conn):
     :return:
     """
     cur = conn.cursor()
-    cur.execute("SELECT assembly FROM functions")
+    cur.execute("SELECT assembly || char(10) FROM functions;")
     rows = cur.fetchall()
     f=open("../input/assembly.asm","w+")
     for row in rows:
         for i in range(0,len(row)):
             f.write(row[i])
         #print(type(row))
+    print("input/assembly.asm created")
     f.close()
-    print("assembly.asm created")
 
 
 
@@ -49,7 +48,6 @@ def main():
     database = "../databases/kernel.sqlite"
     conn = create_connection(database)
     with conn:
-        print("select assembly with limit 5 : ")
         select_assembly(conn)
 
 
