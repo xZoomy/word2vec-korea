@@ -1,0 +1,800 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"onk",
+				"onkeyup\tAttr"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"h",
+				"html\thtml"
+			],
+			[
+				"VA",
+				"VARCHAR"
+			],
+			[
+				"res",
+				"responseText"
+			],
+			[
+				"ht",
+				"html"
+			],
+			[
+				"_",
+				"_POST"
+			],
+			[
+				"su",
+				"submit"
+			],
+			[
+				"tr",
+				"trim"
+			],
+			[
+				"id",
+				"id_Joueur"
+			],
+			[
+				"ke",
+				"key2"
+			],
+			[
+				"T",
+				"tabAmi"
+			],
+			[
+				"p",
+				"pseudo"
+			],
+			[
+				"ver",
+				"verif_ident"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"s",
+				"string"
+			],
+			[
+				"val",
+				"val_rechercher"
+			],
+			[
+				"data",
+				"data"
+			],
+			[
+				"va",
+				"val_rechercher"
+			],
+			[
+				"ser",
+				"search"
+			],
+			[
+				"typ",
+				"typeof"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"on",
+				"onload"
+			],
+			[
+				"ini",
+				"initialiserRép"
+			],
+			[
+				"c",
+				"choix"
+			],
+			[
+				"b",
+				"bRép"
+			],
+			[
+				"a",
+				"alert"
+			],
+			[
+				"co",
+				"compteur"
+			],
+			[
+				"ch",
+				"choixRép"
+			],
+			[
+				"C",
+				"choixReponse"
+			],
+			[
+				"clo",
+				"color2"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"tmp",
+				"tmp2"
+			],
+			[
+				"an",
+				"android"
+			],
+			[
+				"com",
+				"compile"
+			],
+			[
+				"ge",
+				"getElementsByName"
+			],
+			[
+				"Id",
+				"idNiveau"
+			],
+			[
+				"i",
+				"innerHTML"
+			],
+			[
+				"he",
+				"head\tTag"
+			],
+			[
+				"ques",
+				"questionNum"
+			],
+			[
+				"q",
+				"questionNum"
+			],
+			[
+				"num",
+				"numQ"
+			],
+			[
+				"tab",
+				"tabObject"
+			],
+			[
+				"quest",
+				"quest1"
+			],
+			[
+				"templa",
+				"templating"
+			],
+			[
+				"idJ",
+				"idJoueur"
+			],
+			[
+				"IdJ",
+				"IdJoueur2"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"CO",
+				"CodeEntr"
+			],
+			[
+				"CODE",
+				"CodeSani"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"hea",
+				"header\tTag"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"col",
+				"col-sm-8"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"cli",
+				"click"
+			],
+			[
+				"f",
+				"fill"
+			],
+			[
+				"tex",
+				"textContent"
+			],
+			[
+				"preg",
+				"preg_match"
+			],
+			[
+				"An",
+				"AnalyseQuestEleveVue"
+			],
+			[
+				"R",
+				"Rafraichir"
+			],
+			[
+				"Aff",
+				"AfficherQuestion"
+			],
+			[
+				"A",
+				"AnalyserQuest"
+			],
+			[
+				"id_",
+				"id_session"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"tm",
+				"tm3"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"n",
+				"num_grpe2"
+			],
+			[
+				"mysqli",
+				"mysqli_fetch"
+			],
+			[
+				"cpt",
+				"cpt2"
+			],
+			[
+				"gett",
+				"gettype"
+			],
+			[
+				"nb",
+				"nbMauvRep"
+			],
+			[
+				"Bo",
+				"bonneRép"
+			],
+			[
+				"pr",
+				"profil"
+			],
+			[
+				"cp",
+				"cpt2"
+			],
+			[
+				"t",
+				"tab"
+			],
+			[
+				"Ré",
+				"Rép"
+			],
+			[
+				"arra",
+				"array"
+			],
+			[
+				"arr",
+				"array_push"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"m",
+				"mauvaiseRép"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"Q",
+				"Quest"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"pri",
+				"print_r"
+			],
+			[
+				"S",
+				"SELECT"
+			],
+			[
+				"text",
+				"texte"
+			],
+			[
+				"msq",
+				"msql_numrows"
+			],
+			[
+				"int",
+				"intval"
+			],
+			[
+				"nu",
+				"num_grpe"
+			],
+			[
+				"mys",
+				"mysql_query"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"bro",
+				"border-radius"
+			],
+			[
+				"border",
+				"border-width"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"idn",
+				"idn"
+			],
+			[
+				"lo",
+				"login"
+			],
+			[
+				"html",
+				"htmlspecialchars"
+			],
+			[
+				"do",
+				"donnees"
+			],
+			[
+				"nom",
+				"nom_jeu"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"me",
+				"menu"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 247.0,
+		"last_filter": "ja",
+		"selected_items":
+		[
+			[
+				"ja",
+				"Javascript Beautify"
+			],
+			[
+				"php",
+				"PHP CodeBeautifier"
+			],
+			[
+				"j",
+				"Javascript Beautify"
+			],
+			[
+				"h",
+				"HTMLBeautify"
+			],
+			[
+				"p",
+				"PHP CodeBeautifier"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"HTMLBeautify"
+			],
+			[
+				"bea",
+				"HTMLBeautify"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"beau",
+				"HTMLBeautify"
+			],
+			[
+				"instaa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jlphung/Desktop/Coree/stage/word2vec-korea/input/test.asm",
+		"/Users/jlphung/Desktop/Coree/stage/word2vec-korea/input/assembly.asm",
+		"/Users/jlphung/Desktop/Coree/stage/word2vec-korea/codes/assembly3.asm",
+		"/Users/jlphung/Desktop/Coree/stage/word2vec-korea/codes/replace.py",
+		"/Users/jlphung/Desktop/Coree/stage/word2vec-korea/input/kernel.txt",
+		"/Users/jlphung/Downloads/drive-download-20160923T064924Z/pweb_jmilie.sql",
+		"/Volumes/HDD_JLuc/Databases/gensim_word2vec.py",
+		"/Volumes/HDD_JLuc/Databases/assembly.asm",
+		"/Volumes/HDD_JLuc/Databases/kernel copie.txt",
+		"/Users/jlphung/Desktop/Coree/stage/tuto_Word2vecAdventure/main.c",
+		"/Users/jlphung/Desktop/Coree/stage/tuto_Word2vecAdventure/RobotNettoyeur.cpp",
+		"/Users/jlphung/Desktop/Coree/stage/tuto_Word2vecAdventure/essai.asm",
+		"/Users/jlphung/Desktop/Coree/stage/tuto_Word2vecAdventure/text8",
+		"/Applications/MAMP/htdocs/Map 2/Vue/Métro.json",
+		"/Applications/MAMP/htdocs/Map 2/Vue/Map.tpl",
+		"/Volumes/USB DISK/mdpLb.txt",
+		"/Applications/scilab-6.0.1.app/Contents/MacOS/bin/scilab",
+		"/Users/jlphung/Documents/MusiqueDownload/celtique wakfu/Takeout/YouTube/abonnements/abonnements.opml",
+		"/Users/jlphung/nltk_data/corpora/twitter_samples/negative_tweets.json",
+		"/Users/jlphung/Documents/training.1600000.processed.noemoticon.csv",
+		"/Users/jlphung/Documents/3_08_Friday/SentimentAnalysis/trainingandtestdata/training.1600000.processed.noemoticon.csv",
+		"/Users/jlphung/Documents/3_08_Friday/gh.html",
+		"/Users/jlphung/Documents/NodeChatbot/src/config/index.js",
+		"/Users/jlphung/Documents/NodeChatbot/src/config/production.js",
+		"/Users/jlphung/Documents/NodeChatbot/src/config/default.js",
+		"/Users/jlphung/Documents/essai.txt",
+		"/Users/jlphung/Documents/MusiqueDownload/celtique wakfu/TP6_Solution/Livre.cpp",
+		"/Users/jlphung/Documents/MusiqueDownload/celtique wakfu/TP6_Solution/Bibliotheque.cpp",
+		"/Users/jlphung/Documents/NodeChatbot/index.js",
+		"/Users/jlphung/Documents/NodeChatbot/src/config/development.js",
+		"/Users/jlphung/Documents/NodeChatbot/src/server/app.js",
+		"/Users/jlphung/Documents/NodeChatbot/package.json",
+		"/Users/jlphung/Documents/NodeChatbot/src/index.js",
+		"/Users/jlphung/Desktop/bddJL.sql",
+		"/Users/jlphung/Documents/MusiqueDownload/test.sce",
+		"/Users/jlphung/Documents/VERSION FINALE -2/PJS4WEB/PJS4202/Modele/inscrireBD.php",
+		"/Users/jlphung/Documents/VERSION FINALE -2/PJS4WEB/PJS4202/Modele/connectBD.php",
+		"/Users/jlphung/Documents/VERSION FINALE -2/PJS4WEB/PJS4202/index.php",
+		"/Users/jlphung/Documents/Botmind-PHUNG-JL/Question3/test_botmind_nodeJs/obscure-chamber-52809/index.js",
+		"/Users/jlphung/Documents/projetPWEBC.sql",
+		"/Applications/MAMP/htdocs/Map/Modele/connectBD.php",
+		"/Applications/MAMP/htdocs/Map/Modele/appelleBD.php",
+		"/Applications/MAMP/htdocs/Map 2/Modele/utilisateurBD.php",
+		"/Applications/MAMP/htdocs/Map 2/index.php",
+		"/Users/jlphung/Documents/test_botmind/safe-everglades-21596/index.js",
+		"/Users/jlphung/Documents/test_botmind/obscure-chamber-52809/.gitignore",
+		"/Users/jlphung/Documents/test_botmind/obscure-chamber-52809/package.json",
+		"/Users/jlphung/Documents/test_botmind/obscure-chamber-52809/index.js",
+		"/Users/jlphung/Documents/test_botmind/obscure-chamber-52809/ .gitignore ",
+		"/Users/jlphung/Documents/NodeJs/serveur.js",
+		"/Users/jlphung/Documents/test_botmind/package.json",
+		"/Users/jlphung/Documents/Python/SiteWeb2/BDD.sql",
+		"/Users/jlphung/Documents/Python/SiteWeb2/templates/form_connexion.html",
+		"/Users/jlphung/Documents/Python/SiteWeb2/templates/Salaire.html",
+		"/Users/jlphung/Documents/Python/SiteWeb2/templates/Distance.html",
+		"/Users/jlphung/Documents/Python/SiteWeb2/templates/pageDeGardeNonAdmin.html",
+		"/Users/jlphung/Documents/Python/SiteWeb2/templates/form_inscription.html",
+		"/Users/jlphung/Documents/Python/SiteWeb/templates/form_connexioncopie.html",
+		"/Users/jlphung/Documents/Python/SiteWeb2/templates/Statistiques.html",
+		"/Users/jlphung/Documents/Python/SiteWeb2/templates/pageDeGarde.html",
+		"/Users/jlphung/Documents/Python/SiteWeb/templates/form_connexion.html",
+		"/Users/jlphung/Documents/MCD_MPDVf 2/BDD.sql",
+		"/Users/jlphung/Documents/Python/SiteWeb/templates/pageDeGarde.html",
+		"/Users/jlphung/Documents/Python/SiteWeb/static/js/accueil.js",
+		"/Applications/MAMP/htdocs/PJS4/Vue/accueil.tpl",
+		"/Applications/MAMP/htdocs/PJS4WEB/PJS4202/Vue/classement.tpl",
+		"/Applications/MAMP/bin/phpMyAdmin/themes/sprites.css.php",
+		"/Users/jlphung/Documents/Depot/flask/templates/login.html",
+		"/Applications/MAMP/htdocs/Map/Vue/JS/affiche.js",
+		"/Users/jlphung/Documents/W3Schools Offline 2017 - ViralTechFever/W3Schools Offline 2017 - ViralTechFever/www.w3shools.com/index.html",
+		"/Users/jlphung/Documents/MusiqueDownload/www.w3schools.com/html5/default.asp",
+		"/Users/jlphung/Documents/TemplateSiteWeb/Distance.html",
+		"/Users/jlphung/Documents/TemplateSiteWeb/Salaire.html",
+		"/Users/jlphung/Documents/TemplateSiteWeb/form_inscription.html",
+		"/Users/jlphung/Documents/TemplateSiteWeb/form_connexion.html",
+		"/Applications/MAMP/htdocs/PJS4WEB/PJS4202/Vue/Ident.tpl",
+		"/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/geopy/__init__.py",
+		"/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/geopy/geocoders/bing.py",
+		"/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/geopy/format.py",
+		"/Applications/MAMP/htdocs/Map/Vue/leaflet/leaflet-src.js",
+		"/Applications/MAMP/htdocs/Map/Vue/leaflet/leaflet.js",
+		"/Applications/MAMP/htdocs/Map/Vue/Map.tpl",
+		"/Applications/MAMP/htdocs/Map/Vue/leaflet/test.js",
+		"/Users/jlphung/Documents/Python 22:12/templates/jqueryExemple.html",
+		"/Users/jlphung/Documents/dataPython/Stagees.csv",
+		"/Users/jlphung/Documents/Python 22:12/templates/form_inscription.html",
+		"/Applications/MAMP/htdocs/PJS4WEB/PJS4202/Vue/form_inscription.tpl",
+		"/Applications/MAMP/htdocs/ProjetPWEBC/vue/Ident.tpl",
+		"/Users/jlphung/Documents/Python 22:12/templates/form.html",
+		"/Users/jlphung/Documents/Python 22:12/form.py",
+		"/Users/jlphung/Documents/Python 22:12/form.html",
+		"/Users/jlphung/Documents/MCD_MPDVf/BDD.sql",
+		"/Users/jlphung/Documents/MCD_MPDVf/ProjetMaths-Etcheberry-Pane-Phung/BDD.sql",
+		"/Users/jlphung/Documents/MusiqueDownload/MCDmodifie-2/bddJL-2.sql",
+		"/Users/jlphung/Documents/MusiqueDownload/MCDmodifie/bddJL-2.sql",
+		"/Volumes/HDD_JLuc/bddJL.sql",
+		"/Users/jlphung/Documents/MusiqueDownload/bdd.sql",
+		"/Users/jlphung/Documents/MusiqueDownload/Projet-GM1/STAGES_ELEVES_2013_2018_DATA_TABLE.txt",
+		"/Users/jlphung/Documents/autre/essai.py",
+		"/Users/jlphung/Desktop/DUT Archive 4:09/BDPWEBC.sql",
+		"/Volumes/HDD_JLuc/mdp",
+		"/Volumes/USB DISK/;:: Language.ini :::",
+		"/Volumes/USB DISK/4tWosZLMUHfoaYyy47",
+		"/Users/jlphung/Documents/Stage V5/stageV4/Code rapport/HomePage.axml",
+		"/Users/jlphung/Desktop/4tWosZLMUHfoaYyy47",
+		"/Applications/MAMP/htdocs/PJS4/Modele/RecupAmisBD.php",
+		"/Applications/MAMP/htdocs/PJS4/Vue/event.js",
+		"/Applications/MAMP/htdocs/PJS4/Controller/classement.php",
+		"/Applications/MAMP/htdocs/PJS4/Modele/cherchePartie.php",
+		"/Users/jlphung/Downloads/BDPJS4.sql",
+		"/Applications/MAMP/htdocs/ajax/ajax.html",
+		"/Applications/MAMP/htdocs/ajax/v.js",
+		"/Applications/MAMP/htdocs/PJS4/Controller/identification.php",
+		"/Applications/MAMP/htdocs/testSQL/RécupAmisBD.php",
+		"/Users/jlphung/Desktop/USB/dossier sans titre/CODE PROJET PWEB Phung Perrin Rivera/modèle/utilisateurBD.php",
+		"/Users/jlphung/Documents/apache-ftpserver-1.1.0/res/conf/ftpd-full.xml",
+		"/Users/jlphung/Desktop/USB/dossier sans titre/CODE PROJET PWEB Phung Perrin Rivera/controle/Identification.php",
+		"/Applications/MAMP/htdocs/testSQL/utilisateurBD.php",
+		"/Users/jlphung/Desktop/USB/dossier sans titre/CODE PROJET PWEB Phung Perrin Rivera/modèle/TestProfBD.php",
+		"/Users/jlphung/Documents/apache-ftpserver-1.1.0/res/conf/ftpd-typical.xml",
+		"/Users/jlphung/Documents/apache-ftpserver-1.1.0/res/conf/bin.sh",
+		"/Users/jlphung/Desktop/dut2/Appli Reflexive/apache-ftpserver-1.1.0/res/conf/ftpd-typical.xml",
+		"/Users/jlphung/Desktop/dut2/Appli Reflexive/apache-ftpserver-1.1.0/res/conf/ftpd-full.xml",
+		"/Users/jlphung/Documents/apache-ftpserver-1.1.0/bin/ftpd.sh",
+		"/Users/jlphung/Documents/apache-ftpserver-1.1.0/res/conf/mmamma.sh",
+		"/Users/jlphung/Desktop/JEE/apache-tomcat-8.5.11/bin/startup.sh",
+		"/Users/jlphung/Desktop/dut2/Appli Reflexive/Applis Reflexives Java VF/tp4/apache-ftpserver-1.1.0/res/conf/mina.java",
+		"/Users/jlphung/Desktop/dut2/Appli Reflexive/Applis Reflexives Java VF/tp4/apache-ftpserver-1.1.0/res/conf/ftpd-typical.xml"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "gensim_word2vec.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 216.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

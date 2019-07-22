@@ -3,13 +3,14 @@ from gensim import utils
 from gensim.models import word2vec
 import logging
 import operator
-
+import re
 import urllib.request
 import os
 import zipfile
+from sys import exit #Use this line for spyder (Ipython)
 
 vector_dim = 300
-# root_path = "./"
+#root_path = "./"
 MAX_WORDS_IN_BATCH = 10000
 
 class Text8Corpus2(object):
@@ -34,15 +35,18 @@ class Text8Corpus2(object):
                         yield sentence
                     break
                 last_token = text.rfind(b' ')  # last token may have been split in two... keep for next iteration
+                regex = r'[\[\]+-:]'# regex for adding space between caract
 
+                r = re.compile(r'[;,\s]*\s*') #regex for matching , ; and  space
+                #split with regex
 
-                words, rest = (utils.to_unicode(text[:last_token]).split(),
+                words, rest = (r.split(re.sub(regex, ' \g<0> ',utils.to_unicode(text[:last_token]))),
                                text[last_token:].strip()) if last_token >= 0 else ([], text)
-                # words, rest = (utils.to_unicode(text[:last_token]).split(),
+                #words, rest = (utils.to_unicode(text[:last_token]).split(),
                 #               text[last_token:].strip()) if last_token >= 0 else ([], text)
-                #print(words)
-                sentence.extend(words)
 
+                sentence.extend(words)
+                
                 sentence = list(filter(None, sentence))  #delete empty string
                 sentence = list(filter(operator.methodcaller('strip'), sentence)) #delete white spaces string
                 print("Sentence : {}".format(sentence[:5]))
@@ -85,9 +89,11 @@ def gensim_demo(nb_iters, name_model='mymodel', name_input='text8', nb_min=10):
     print("Training on {} file ({} iterations)".format(filename, nb_iters))
     # if not os.path.exists((root_path + filename).strip('.zip')):
     #      zipfile.ZipFile(root_path+filename).extractall()
-    sentences = word2vec.Text8Corpus(filename)
+    # sentences = word2vec.Text8Corpus(filename)
+    sentences = Text8Corpus2(filename)
     # sentences = Text8Corpus2(filename)
     # Ca marche que avec avec le ficher kernel.txt les 2 méthodes :V
+
     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
     model = word2vec.Word2Vec(sentences, iter=nb_iters, min_count=nb_min, size=300, workers=4)
     # iter= nb epochs, min_count=nb mini pr etre ds le voc, size=size of word vector, workers=parallel
@@ -104,6 +110,9 @@ def gensim_demo(nb_iters, name_model='mymodel', name_input='text8', nb_min=10):
     # str_data = read_data(root_path + filename)
     # index_data = convert_data_to_index(str_data, model.wv)
     # print(str_data[:4], index_data[:4])
+    print("Similarity rbp rbx : ")
+    print(model.wv.similarity('rbp', 'rbx'))
+    print(model.wv.index2word[:30])
     print("Model saved as {}".format(name_model))
     model.save("../model/" + name_model) # name ici
 
@@ -147,8 +156,8 @@ if __name__ == "__main__":
                 # name_model = input("Name of model (def='mymodel')")
                 # name_input = input("Name of input file (def='text8') ? ")
                 gensim_demo(nb_iters, name_model, name_input, nb_min)
-            else:
-                print("Yeah i knew that !")
+                else:
+                    print("Yeah i knew that !")
         elif run_opt == 2:
             gensim_load()
         elif run_opt == 0:
