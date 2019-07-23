@@ -46,7 +46,7 @@ class Text8Corpus2(object):
                 #               text[last_token:].strip()) if last_token >= 0 else ([], text)
 
                 sentence.extend(words)
-                
+
                 sentence = list(filter(None, sentence))  #delete empty string
                 sentence = list(filter(operator.methodcaller('strip'), sentence)) #delete white spaces string
                 print("Sentence : {}".format(sentence[:5]))
@@ -91,7 +91,6 @@ def gensim_demo(nb_iters, name_model='mymodel', name_input='text8', nb_min=10):
     #      zipfile.ZipFile(root_path+filename).extractall()
     # sentences = word2vec.Text8Corpus(filename)
     sentences = Text8Corpus2(filename)
-    # sentences = Text8Corpus2(filename)
     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
     model = word2vec.Word2Vec(sentences, iter=nb_iters, min_count=nb_min, size=300, workers=4)
     # iter= nb epochs, min_count=nb mini pr etre ds le voc, size=size of word vector, workers=parallel
@@ -138,9 +137,30 @@ def gensim_load(name_model='mymodel'):
         elif choice == 0:
             break
 
+def training_model():
+    filename = "../input/test.asm"
+    A = []
+    i=0
+    nb_iters = 10
+    with open (filename, "r") as myfile:
+        s = myfile.read()
+    a = s.splitlines()
+    r = re.compile(r'[;,\s]*\s*')
+    regex = r'[\[\]+-:]'
+    print("Training on {} file ({} iterations)".format(filename, nb_iters))
+    for i in range(0, len(a)):
+        A.append(list(filter(None, r.split(re.sub(regex, ' \g<0> ', a[i])))))
+    model = word2vec.Word2Vec(iter=nb_iters, min_count=1, size=300, workers=4)
+    model.build_vocab(A)
+    model.train(A, total_examples=model.corpus_count, epochs=model.iter)
+    model.save("../model/goodmodel")
+    # sentence = list(filter(None, sentence))  #delete empty string
+    # sentence = list(filter(operator.methodcaller('strip'), sentence)) #delete white spaces string
+
+
 if __name__ == "__main__":
     while True:
-        print("\n---- MENU ----\n 1 - training model + examples\n 2 - loading model\n 0 - EXIT") #2 - tf model\n 3 - keras model(bugged)\n
+        print("\n---- MENU ----\n 1 - training model + examples\n 2 - loading model\n 3 - training model\n 0 - EXIT") #2 - tf model\n 3 - keras model(bugged)\n
         run_opt = int(input())
         if run_opt == 1:
             really = input("Are you sure to train the model? (y or n) ")
@@ -149,7 +169,7 @@ if __name__ == "__main__":
                 name_model = 'mymodel'
                 # name_input = '../input/assembly.asm'
                 name_input = '../input/test.asm'
-                nb_min = 10
+                nb_min = 1
                 nb_iters = int(input("Nb iters ? "))
                 # name_model = input("Name of model (def='mymodel')")
                 # name_input = input("Name of input file (def='text8') ? ")
@@ -157,8 +177,18 @@ if __name__ == "__main__":
             else:
                 print("Yeah i knew that !")
         elif run_opt == 2:
-            gensim_load()
+            # name_input = input("Nom du model ? ")
+            name_input = "goodmodel"
+            gensim_load(name_input)
+        elif run_opt ==3:
+            really = input("Are you sure to train the model? (y or n) ")
+            if really == "y":
+                training_model()
+            else:
+                print("lol")
         elif run_opt == 0:
             exit()
         else:
             print("Error! Please enter a valid option\n")
+
+    # similarity between lines
