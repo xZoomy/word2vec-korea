@@ -1,3 +1,4 @@
 databases/kernel.sqlite
 input/
 model/
+*.sublime-workspace

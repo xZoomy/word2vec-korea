@@ -3,10 +3,10 @@
 ## How to use
 
 Run `setup.py`\
-Put `kernel.sqlite` in `/databases` folder and `kernel.txt` in `/input`.\
+Put `kernel.sqlite` (1GB file) in `/databases` folder.\
 Run `python createASM.py` in console in `/codes` folder.\
 Run `python inputModifier.py`.\
-Run `python gensim_word2vec.py`.\
+Run `python gensim_word2vec.py` to play with the neural network.\
 
 ## Files
 
@@ -17,8 +17,8 @@ Run `python gensim_word2vec.py`.\
 
 ## Dependencies
 
-[gensim](https://radimrehurek.com/gensim/) (`pip install --upgrade gensim`)
-Python 3.6.8
+• Python [3.6.8](https://www.python.org/downloads/release/python-368/)\
+• [gensim](https://radimrehurek.com/gensim/)
 
 ## Documentation
 

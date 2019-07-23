@@ -92,8 +92,6 @@ def gensim_demo(nb_iters, name_model='mymodel', name_input='text8', nb_min=10):
     # sentences = word2vec.Text8Corpus(filename)
     sentences = Text8Corpus2(filename)
     # sentences = Text8Corpus2(filename)
-    # Ca marche que avec avec le ficher kernel.txt les 2 méthodes :V
-
     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
     model = word2vec.Word2Vec(sentences, iter=nb_iters, min_count=nb_min, size=300, workers=4)
     # iter= nb epochs, min_count=nb mini pr etre ds le voc, size=size of word vector, workers=parallel
@@ -145,19 +143,19 @@ if __name__ == "__main__":
         print("\n---- MENU ----\n 1 - training model + examples\n 2 - loading model\n 0 - EXIT") #2 - tf model\n 3 - keras model(bugged)\n
         run_opt = int(input())
         if run_opt == 1:
-            really = input("Are you sure ? (y or n) ")
+            really = input("Are you sure to train the model? (y or n) ")
             if really == "y":
                 # nb_iters = 1
                 name_model = 'mymodel'
                 # name_input = '../input/assembly.asm'
-                name_input = '../input/kernel.txt'
+                name_input = '../input/test.asm'
                 nb_min = 10
                 nb_iters = int(input("Nb iters ? "))
                 # name_model = input("Name of model (def='mymodel')")
                 # name_input = input("Name of input file (def='text8') ? ")
                 gensim_demo(nb_iters, name_model, name_input, nb_min)
-                else:
-                    print("Yeah i knew that !")
+            else:
+                print("Yeah i knew that !")
         elif run_opt == 2:
             gensim_load()
         elif run_opt == 0:
