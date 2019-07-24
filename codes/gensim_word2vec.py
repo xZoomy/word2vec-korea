@@ -75,6 +75,12 @@ def read_data(filename):
         data = f.read(f.namelist()[0]).split()
     return data
 
+def confirm(msg):
+    answer = ""
+    while answer not in ["y", "n"]:
+        answer = input("Are you sure to {}? [Y/N] ".format(msg)).lower()
+    return answer == "y"
+
 def convert_data_to_index(string_data, wv):
     index_data = []
     for word in string_data:
@@ -115,6 +121,7 @@ def gensim_demo(nb_iters, name_model='mymodel', name_input='text8', nb_min=10):
 
 
 def gensim_load(name_model='mymodel'):
+    print("Loading {} model.".format(name_model))
     model = word2vec.Word2Vec.load('../model/' + name_model)
     vocab_size = len(model.wv.vocab)
     print("The vocabulary contains {} words.".format(vocab_size))
@@ -137,11 +144,9 @@ def gensim_load(name_model='mymodel'):
         elif choice == 0:
             break
 
-def training_model():
+def training_model(nb_iters = 10):
     filename = "../input/test.asm"
     A = []
-    i=0
-    nb_iters = 10
     with open (filename, "r") as myfile:
         s = myfile.read()
     a = s.splitlines()
@@ -160,11 +165,10 @@ def training_model():
 
 if __name__ == "__main__":
     while True:
-        print("\n---- MENU ----\n 1 - training model + examples\n 2 - loading model\n 3 - training model\n 0 - EXIT") #2 - tf model\n 3 - keras model(bugged)\n
+        print("\n---- MENU ----\n 1 - training mymodel + examples\n 2 - loading model\n 3 - training goodmodel\n 0 - EXIT") #2 - tf model\n 3 - keras model(bugged)\n
         run_opt = int(input())
         if run_opt == 1:
-            really = input("Are you sure to train the model? (y or n) ")
-            if really == "y":
+            if confirm("train the mymodel"):
                 # nb_iters = 1
                 name_model = 'mymodel'
                 # name_input = '../input/assembly.asm'
@@ -181,8 +185,7 @@ if __name__ == "__main__":
             name_input = "goodmodel"
             gensim_load(name_input)
         elif run_opt ==3:
-            really = input("Are you sure to train the model? (y or n) ")
-            if really == "y":
+            if confirm("train the goodmodel"):
                 training_model()
             else:
                 print("lol")
