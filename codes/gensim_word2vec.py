@@ -7,14 +7,18 @@ import re
 import urllib.request
 import os
 import zipfile
-from sys import exit #Use this line for spyder (Ipython)
+from sys import exit  # Use this line for spyder (Ipython)
+import numpy as np
+from scipy import spatial
 
 vector_dim = 300
-#root_path = "./"
+# root_path = "./"
 MAX_WORDS_IN_BATCH = 10000
+
 
 class Text8Corpus2(object):
     """Iterate over sentences from the "assembly.asm" corpus, unzipped from http://mattmahoney.net/dc/text8.zip ."""
+
     def __init__(self, fname, max_sentence_length=MAX_WORDS_IN_BATCH):
         self.fname = fname
         self.max_sentence_length = max_sentence_length
@@ -35,24 +39,25 @@ class Text8Corpus2(object):
                         yield sentence
                     break
                 last_token = text.rfind(b' ')  # last token may have been split in two... keep for next iteration
-                regex = r'[\[\]+-:]'# regex for adding space between caract
+                regex = r'[\[\]+-:]'  # regex for adding space between caract
 
-                r = re.compile(r'[;,\s]*\s*') #regex for matching , ; and  space
-                #split with regex
+                r = re.compile(r'[;,\s]*\s*')  # regex for matching , ; and  space
+                # split with regex
 
-                words, rest = (r.split(re.sub(regex, ' \g<0> ',utils.to_unicode(text[:last_token]))),
+                words, rest = (r.split(re.sub(regex, ' \g<0> ', utils.to_unicode(text[:last_token]))),
                                text[last_token:].strip()) if last_token >= 0 else ([], text)
-                #words, rest = (utils.to_unicode(text[:last_token]).split(),
+                # words, rest = (utils.to_unicode(text[:last_token]).split(),
                 #               text[last_token:].strip()) if last_token >= 0 else ([], text)
 
                 sentence.extend(words)
 
-                sentence = list(filter(None, sentence))  #delete empty string
-                sentence = list(filter(operator.methodcaller('strip'), sentence)) #delete white spaces string
+                sentence = list(filter(None, sentence))  # delete empty string
+                sentence = list(filter(operator.methodcaller('strip'), sentence))  # delete white spaces string
                 print("Sentence : {}".format(sentence[:5]))
                 while len(sentence) >= self.max_sentence_length:
                     yield sentence[:self.max_sentence_length]
                     sentence = sentence[self.max_sentence_length:]
+
 
 def maybe_download(filename, url, expected_bytes):
     """Download a file if not present, and make sure it's the right size."""
@@ -67,6 +72,7 @@ def maybe_download(filename, url, expected_bytes):
             'Failed to verify ' + filename + '. Can you get to it with a browser?')
     return filename
 
+
 # convert the input data into a list of integer indexes aligning with the wv indexes
 # Read the data into a list of strings.
 def read_data(filename):
@@ -75,11 +81,13 @@ def read_data(filename):
         data = f.read(f.namelist()[0]).split()
     return data
 
+
 def confirm(msg):
     answer = ""
     while answer not in ["y", "n"]:
         answer = input("Are you sure to {}? [Y/N] ".format(msg)).lower()
     return answer == "y"
+
 
 def convert_data_to_index(string_data, wv):
     index_data = []
@@ -87,6 +95,7 @@ def convert_data_to_index(string_data, wv):
         if word.decode() in wv:
             index_data.append(wv.vocab[word.decode()].index)
     return index_data
+
 
 def gensim_demo(nb_iters, name_model='mymodel', name_input='text8', nb_min=10):
     # url = 'http://mattmahoney.net/dc/'
@@ -102,10 +111,13 @@ def gensim_demo(nb_iters, name_model='mymodel', name_input='text8', nb_min=10):
     # iter= nb epochs, min_count=nb mini pr etre ds le voc, size=size of word vector, workers=parallel
     # model = word2vec.Word2Vec(sentences, iter=10, min_count=10, size=300, workers=4) #default
 
-    #print(model.wv['the'])
+    # print(model.wv['the'])
     vocab_size = len(model.wv.vocab)
-    print('Most commond words are: {} {} {}'.format(model.wv.index2word[0], model.wv.index2word[1], model.wv.index2word[2]))
-    print('Least commond words are: {} {} {}'.format(model.wv.index2word[vocab_size - 1], model.wv.index2word[vocab_size - 2], model.wv.index2word[vocab_size - 3]))
+    print('Most commond words are: {} {} {}'.format(model.wv.index2word[0], model.wv.index2word[1],
+                                                    model.wv.index2word[2]))
+    print('Least commond words are: {} {} {}'.format(model.wv.index2word[vocab_size - 1],
+                                                     model.wv.index2word[vocab_size - 2],
+                                                     model.wv.index2word[vocab_size - 3]))
     # print(model.wv.similarity('woman', 'man'), model.wv.similarity('man', 'elephant'))
     # print(model.wv.doesnt_match("green blue red zebra".split()))
     # print('Index of "of" is: {}'.format(model.wv.vocab['of'].index))
@@ -117,7 +129,7 @@ def gensim_demo(nb_iters, name_model='mymodel', name_input='text8', nb_min=10):
     print(model.wv.similarity('rbp', 'rbx'))
     print(model.wv.index2word[:30])
     print("Model saved as {}".format(name_model))
-    model.save("../model/" + name_model) # name ici
+    model.save("../model/" + name_model)  # name ici
 
 
 def gensim_load(name_model='mymodel'):
@@ -126,7 +138,7 @@ def gensim_load(name_model='mymodel'):
     vocab_size = len(model.wv.vocab)
     print("The vocabulary contains {} words.".format(vocab_size))
     while True:
-        choice = int(input("\n 1 - Find the odd one out\n 2 - Similarity\n 3 - Get vector\n 0 - Back\n"))
+        choice = int(input("\n 1 - Find the odd one out\n 2 - Similarity\n 3 - Get vector\n 4 - Similarity line \n 0 - Back\n"))
         if choice == 1:
             words_input = input("Words ? (put space between them) : ")
             print(model.wv.doesnt_match(words_input.split()))
@@ -141,13 +153,30 @@ def gensim_load(name_model='mymodel'):
                 print(model.wv[word_input])
             else:
                 print("This word is not in the vocabulary :(")
+        elif choice == 4:
+            print("Similarity between sentences : ")
+            wordvectors = model.wv  # KeyedVectors Instance gets stored
+            i1="mov eax, [ebx]" #instruction 1
+            i2="mov [esi+eax], cl" #instruction 2
+            r = re.compile(r'[;,\s]*\s*')
+            regex = r'[\[\]+-:]'
+
+            s1 = list(filter(None, r.split(re.sub(regex, ' \g<0> ', i1))))
+            m1 = np.mean(model[s1], axis=0)
+            s2 = list(filter(None, r.split(re.sub(regex, ' \g<0> ', i2))))
+            print(s1)
+            print(s2)
+            m2 = np.mean(model[s2], axis=0)
+            result = 1 - spatial.distance.cosine(m1, m2)
+            print("The similarity is4 : "+str(result))
         elif choice == 0:
             break
 
-def training_model(nb_iters = 10):
+
+def training_model(nb_iters=10):
     filename = "../input/test.asm"
     A = []
-    with open (filename, "r") as myfile:
+    with open(filename, "r") as myfile:
         s = myfile.read()
     a = s.splitlines()
     r = re.compile(r'[;,\s]*\s*')
@@ -163,9 +192,12 @@ def training_model(nb_iters = 10):
     # sentence = list(filter(operator.methodcaller('strip'), sentence)) #delete white spaces string
 
 
+
+
 if __name__ == "__main__":
     while True:
-        print("\n---- MENU ----\n 1 - training mymodel + examples\n 2 - loading model\n 3 - training goodmodel\n 0 - EXIT") #2 - tf model\n 3 - keras model(bugged)\n
+        print(
+            "\n---- MENU ----\n 1 - training mymodel + examples\n 2 - loading model\n 3 - training goodmodel\n 0 - EXIT")  # 2 - tf model\n 3 - keras model(bugged)\n
         run_opt = int(input())
         if run_opt == 1:
             if confirm("train the mymodel"):
@@ -184,7 +216,7 @@ if __name__ == "__main__":
             # name_input = input("Nom du model ? ")
             name_input = "goodmodel"
             gensim_load(name_input)
-        elif run_opt ==3:
+        elif run_opt == 3:
             if confirm("train the goodmodel"):
                 training_model()
             else:
